@@ -20,6 +20,11 @@ body{
     padding: 10px;
     margin: 10px;
 }
+
+.menu:hover{
+    color: rgb(114, 124, 124);
+    padding: 5px;
+}
 /*En el index quiero poner el menu centrado, 
 el titulo a la izquierda en el medio y la foto a la derecha*/
 h1{
