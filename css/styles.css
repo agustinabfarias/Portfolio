@@ -21,10 +21,7 @@ body{
     margin: 10px;
 }
 
-.menu:hover{
-    color: rgb(114, 124, 124);
-    padding: 5px;
-}
+
 /*En el index quiero poner el menu centrado, 
 el titulo a la izquierda en el medio y la foto a la derecha*/
 h1{
@@ -81,7 +78,7 @@ h4{
     padding: 20px;
     margin: 10px;
     align-items: center;
-    
+    text-decoration: none;
 }
 
 .videos{
@@ -108,4 +105,23 @@ p{
     justify-content: left;
     align-items: center;
     align-content:left;
+}
+
+
+/*pseudoclases*/
+.menu:hover{
+    color: rgb(114, 124, 124);
+    padding: 5px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+.tipofoto:hover{
+    color: black;
 }
