@@ -7,21 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audiovisuales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav>
-        <!--Enlaces Relativos-->
+<body class="bg-dark">
+    <!--nav>
+        //Enlaces Relativos
         <a href="../index.html" class="menu">Inicio</a>
         <a href="./fotografía.html" class="menu">Fotografía</a>
         <a href="#" class="menu">Audiovisuales</a>
         <a href="./sobremi.html" class="menu">Sobre mi</a>
         <a href="./contacto.html" class="menu">Contacto</a>
-    </nav>
-    <main>
-        <header>
+    </nav-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"> 
+                <li class="nav-item">
+                <a class="nav-link" href="#">Audiovisuales</a>
+                </li>
+                <li class="nav-item">
+                    <!-- acá en realidad quería que el mismo dropdown pueda ser cliqueable en la opcion de fotografía y a la vez poder hacer un hover con las opciones pero no pude-->
+                    <a class="nav-link" href="../pages/fotografía.html">Fotografía</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="../pages/fotografía.html"  data-bs-toggle="dropdown" aria-expanded="false">
+                    Fotografía
+                    </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../subpages/fotoanalogica.html">Fotografía Analógica</a></li>
+                    <li><a class="dropdown-item" href="../subpages/books.html">Books</a></li>
+                    <li><a class="dropdown-item" href="../subpages/fotoproducto.html">Foto Producto</a></li>
+                    <li><a class="dropdown-item" href="../subpages/lugares.html">Lugares</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="../pages/sobremi.html">Sobre Mi</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+    <header>
+        <main>
             <h1 class="titulo"> Audiovisuales </h1>
-        </header>
-    </main>
+        </main>
+    </header>
     <nav class="videos">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/C_W3sFT4PWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Isq0vBeeSmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

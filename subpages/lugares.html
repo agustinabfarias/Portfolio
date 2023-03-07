@@ -7,21 +7,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lugares</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav>
-        <!--Enlaces Relativos-->
-        <a href="../index.html" class="menu">Inicio</a>
-        <a href="../pages/fotografía.html" class="menu">Fotografía</a>
-        <a href="../pages/audiovisuales.html" class="menu">Audiovisuales</a>
-        <a href="../pages/sobremi.html" class="menu">Sobre mi</a>
-        <a href="../pages/contacto.html" class="menu">Contacto</a>
-    </nav>
-    <main>
-        <header>
-            <h1 class="titulo"> Lugares </h1>
-        </header>
-    </main>
+<body class="bg-dark">
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"> 
+                    <li class="nav-item">
+                    <a class="nav-link" href="../pages/audiovisuales.html">Audiovisuales</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- acá en realidad quería que el mismo dropdown pueda ser cliqueable en la opcion de fotografía y a la vez poder hacer un hover con las opciones pero no pude-->
+                        <a class="nav-link" href="../pages/fotografía.html">Fotografía</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../pages/fotografía.html"  data-bs-toggle="dropdown" aria-expanded="false">
+                        Fotografía
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../subpages/fotoanalogica.html">Fotografía Analógica</a></li>
+                        <li><a class="dropdown-item" href="../subpages/books.html">Books</a></li>
+                        <li><a class="dropdown-item" href="../subpages/fotoproducto.html">Foto Producto</a></li>
+                        <li><a class="dropdown-item" href="#">Lugares</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="../pages/sobremi.html">Sobre Mi</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </header>
+        <main>
+            <section>
+                <h1 class="titulo"> Lugares </h1>
+            </section>            
+        </main>
+
+
     <div class="tipofoto">
         <img src="../img/lugares/1.jpg" alt="cartel" height="300" width="450">
         <img src="../img/lugares/2.jpg" alt="naturaleza" height="300" width="450">

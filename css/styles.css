@@ -6,8 +6,9 @@
     font-family: "Garet-Heavy", sans-serif;
     src: url("..//tipografias/Garet-Heavy.ttf");
 }
+/*POR QUE EL FONDO ES BLANCO*/
 body{
-    background-color: rgb(47, 46, 46);
+    color: rgb(47, 46, 46);
 }
 
 .menu{
@@ -52,18 +53,20 @@ h2{
     text-align: center;
 }
 
-h3{
+.subtitulo{
     font-family: "Garet-Heavy", sans-serif;
     font-size: 20px;
     color: rgb(140, 139, 139);
-}
-
-h4{
-    font-family: "Garet-Heavy", sans-serif;
-    font-size: 15px;
-    color: rgb(140, 139, 139);
     text-align: center;
 }
+
+.epigrafe{
+    font-family: "Garet-Heavy", sans-serif;
+    font-size: 15px;
+    color: rgb(224, 224, 224);
+    text-align: center;
+}
+
 
 .hielos{
     display: flex;
@@ -79,6 +82,7 @@ h4{
     margin: 10px;
     align-items: center;
     text-decoration: none;
+
 }
 
 .videos{
@@ -107,21 +111,24 @@ p{
     align-content:left;
 }
 
+.navbar-collapse{
+    display: flex;
+    justify-content: center;
+}
 
 /*pseudoclases*/
-.menu:hover{
-    color: rgb(114, 124, 124);
-    padding: 5px;
+.epigrafe:hover{
+    color: black;
+    padding: 1px;
+    font-weight: bold;
 }
 
 a:link{
     text-decoration: none;
+    color: black;
 }
 
 a:visited{
     text-decoration: none;
 }
 
-.tipofoto:hover{
-    color: black;
-}
