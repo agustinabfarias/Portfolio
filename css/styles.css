@@ -217,6 +217,37 @@ a:visited{
     "ig ig ig foto foto foto foto foto foto";
     
 }
+
+/*grid galeria*/
+.galeria{
+    padding: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgb(64, 64, 64);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+}
+/**vertical*/
+.v{
+    grid-row: span 2;
+}
+/**horizontal*/
+.h{
+    grid-column: span 2;
+}
+.vh{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
 /*grid sobre mi*/
 .arquitectura2{
     display: grid;
@@ -268,7 +299,7 @@ a:visited{
 }
 
 /*responsive index*/
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 576px) {
     .arquitectura {
         display: grid;
         grid-template-areas:  "tl" "sb" "foto"  ;
@@ -308,7 +339,7 @@ a:visited{
     }
 }
 /*responsive sobre mi*/
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 576px) {
     /*.arquitectura2 {
         display: grid;
         grid-template-areas:  "tl2" "par" "foto"  ;
@@ -387,7 +418,7 @@ a:visited{
 
 /*Responsive audiovisuales*/
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 576px) {
     iframe{
             height: 300px;
             width: 400px;
@@ -396,7 +427,7 @@ a:visited{
 
 /*Responsive fotografia*/
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 576px) {
     .fotomenu .container{
             /*box modeling*/
             width: 90%;
@@ -419,5 +450,19 @@ a:visited{
         display: flex;
         justify-content: space-around;
         align-items: end;
+    }
+}
+
+/*Responsive fotografia*/
+@media(max-width: 560px){
+    v{
+        grid-row: span 1;
+    }
+    h{
+        grid-column: span 1;
+    }
+    vh{
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }
