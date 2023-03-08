@@ -60,6 +60,18 @@ h2{
     text-align: center;
 }
 
+.footer{
+    font-family: "Garet-Heavy", sans-serif;
+    font-size: 15px;
+    color: rgb(224, 224, 224);
+    text-align: center;
+    display: flex;
+    align-items:flex-start;
+    justify-content: right;
+    padding: 5%;
+    margin: none;
+
+}
 .epigrafe{
     font-family: "Garet-Heavy", sans-serif;
     font-size: 15px;
@@ -74,24 +86,28 @@ h2{
     
 }
 
-.tipofoto{
+.tipofoto-container{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 20px;
-    margin: 10px;
+    /*padding: 20px;
+    margin: 10px;*/
     align-items: center;
     text-decoration: none;
-
 }
 
-.videos{
+.container{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /*padding: 20px;*/
-    margin: 10px;
-    align-items: center;    
+    /*padding: 0px;
+    margin: 10px;*/
+    align-items: center;
+}
+
+.container:hover{
+    cursor: pointer;
+
 }
 
 p{
@@ -132,3 +148,85 @@ a:visited{
     text-decoration: none;
 }
 
+/* GRID */
+
+.espacio{
+    grid-area: es;
+}
+
+.titulo{
+    grid-area: tl;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+}
+.subtitulo{
+    grid-area: sb;
+
+    justify-items: center;
+}
+
+.hielos{
+    grid-area: foto;
+}
+
+.ig{
+    grid-area: ig;
+}
+.arquitectura{
+    display: grid;
+    /*areas*/
+    grid-template-columns: 4fr, auto;
+    grid-template-rows: 50px 300px  auto ;
+    /*grid-auto-rows: minmax(100px, auto);*/
+    grid-template-areas:
+    "es es es es   es   es   es   es   es"
+    "tl tl tl foto foto foto foto foto foto"
+    "sb sb sb foto foto foto foto foto foto"
+    "ig ig ig foto foto foto foto foto foto";
+    
+}
+
+.arquitectura{
+    display: grid;
+    /*areas*/
+    grid-template-columns: 4fr, auto;
+    grid-template-rows: 50px 150px 20px auto ;
+    /*grid-auto-rows: minmax(100px, auto);*/
+    grid-template-areas:
+    "es es es es   es   es   es   es   es"
+    "tl tl tl foto foto foto foto foto es"
+    "sb sb sb foto foto foto foto foto es"
+    "ig ig ig foto foto foto foto foto es"
+    "es es es es   es   es   es   es   es";
+}
+
+.titulo2{
+    grid-area: tl;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-family: "Garet-Heavy", sans-serif;
+    font-size: 60px;
+    color: rgb(221, 221, 221);
+    font-weight: bold;
+    text-align: center;
+}
+.hielos{
+    grid-area: foto;
+}
+.par{
+    grid-area: sb;
+    font-size: 19px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+/*.ft{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(4,auto);
+    grid-gap:10px;
+}*/
