@@ -45,6 +45,8 @@ h1{
     color: rgb(221, 221, 221);
     font-weight: bold;
     text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 h2{
     font-family: "Garet-Heavy", sans-serif;
@@ -98,13 +100,13 @@ h2{
 
 .container{
     display: flex;
+    padding: 5px;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    /*padding: 0px;
-    margin: 10px;*/
+    gap: 2em;
+    flex-flow: row wrap;
     align-items: center;
+    
 }
-
 .container:hover{
     cursor: pointer;
 
@@ -167,8 +169,17 @@ a:visited{
 }
 .subtitulo{
     grid-area: sb;
-
+    padding: top 1em; 
+    padding-bottom: 1em;
     justify-items: center;
+}
+
+.subtitulo .comentario{
+
+    padding: top 1em; 
+    padding-bottom: 1em;
+    justify-items: center;
+
 }
 
 .hielos{
@@ -191,38 +202,38 @@ a:visited{
     "ig ig ig foto foto foto foto foto foto";
     
 }
-
-.arquitectura{
+/*grid sobre mi*/
+.arquitectura2{
     display: grid;
     /*areas*/
-    grid-template-columns: 4fr, auto;
-    grid-template-rows: 50px 250px 20px auto ;
+    grid-template-columns: 4fr, 4fr, 1fr;
+    grid-template-rows: 50px 200px 200px auto ;
     /*grid-auto-rows: minmax(100px, auto);*/
     grid-template-areas:
-    "es es es es   es   es   es   es   es"
-    "tl tl tl foto foto foto foto foto es"
-    "sb sb sb foto foto foto foto foto es"
-    "ig ig ig foto foto foto foto foto es"
-    "es es es es   es   es   es   es   es";
+    "es     es      es   es   es    es"
+    "tl2  foto2 foto2 foto2 foto2 foto2 "
+    "par  foto2 foto2 foto2 foto2 foto2 "
+    "par   foto2 foto2 foto2 foto2 foto2 ";
 }
 
 .titulo2{
-    grid-area: tl;
+    grid-area: tl2;
     display: flex;
     justify-content: center;
     align-items: end;
     font-family: "Garet-Heavy", sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     color: rgb(221, 221, 221);
     font-weight: bold;
     text-align: center;
+
 }
-.hielos{
-    grid-area: foto;
+.yo{
+    grid-area: foto2;
 }
 .par{
-    grid-area: sb;
-    font-size: 19px;
+    grid-area: par;
+    font-size: 15px;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -242,16 +253,23 @@ a:visited{
 
 
 
-
+/*responsive index*/
 @media screen and (max-width: 479px) {
     .arquitectura {
         display: grid;
-        grid-template-areas:  "tl" "sb" "foto" "es" ;
+        grid-template-areas:  "tl" "sb" "foto"  ;
         grid-template-columns: 100%;
         grid-template-rows: 100px 20px auto 20px 
     }
     .titulo {
         font-size: 30px;
+        margin-top: 10 px;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }
+    .sb{
+        font-size: 10px;
         margin-top: 10 px;
         display: flex;
         justify-content: space-around;
@@ -275,4 +293,89 @@ a:visited{
         margin-left: auto;
     }
 }
+/*responsive sobre mi*/
+@media screen and (max-width: 479px) {
+    /*.arquitectura2 {
+        display: grid;
+        grid-template-areas:  "tl2" "par" "foto"  ;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 200px auto  
+    }
+    .titulo {
+        font-size: 30px;
+        margin-top: 10 px;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    .sb{
+        font-size: 10px;
+        margin-top: 10 px;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }
+    .yo{
+        background-color: aliceblue;
+        padding: 20px;
+    }
+    .yo img{
+        height: 30px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }*/
+    .arquitectura2{
+        display: grid;
+        grid-template-areas:  "tl2" "par" "foto"  ;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 200px 600px 
+    }
+    .titulo2 {
+        font-size: 30px;
+        margin-top: 10 px;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }
+    .par{
+        font-size: 10px;
+        margin-top: 10 px;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }
+    .yo{
+        display: flex;
+        padding-top: 5px;
+        min-height: 100px;
+        max-width: 200px; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .yo img{
+        height: 300px;
+        width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
 
+    }
+}
+
+/*Responsive audiovisuales*/
+
+@media screen and (max-width: 479px) {
+    iframe{
+            height: 300px;
+            width: 400px;
+    }
+}
