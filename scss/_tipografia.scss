@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Garet-Book", sans-serif;
+    src: url("../tipografias/Garet-Book.ttf");
+}
+@font-face {
+    font-family: "Garet-Heavy", sans-serif;
+    src: url("..//tipografias/Garet-Heavy.ttf");
+}
+
+$tamaño-titulo: 38px;
+$tipografia-titulo:"Garet-Heavy", sans-serif;
+$color-titulo:  rgb(221, 221, 221);
+$tipografia-sub:"Garet-Book" sans-serif;
+
+
+//titulos
+
+h1{
+    font-family:$tipografia-titulo;
+    font-size: $tamaño-titulo;
+    color:$color-titulo;
+    font-weight: bold;
+}
+
+.titulo{
+    font-family: $tipografia-titulo;
+    font-size: 50px;
+    color: rgb(156, 156, 156);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.subtitulo .comentario{
+    font-family: $tipografia-sub;
+    font-size: 1000px;
+    color: rgb(221, 221, 221);
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+
+}
+h2{
+    font-family:$tipografia-sub;
+    font-size: 40px;
+    color: rgb(140, 139, 139);
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+}
+
+.subtitulo{
+    font-family:$tipografia-sub;
+    font-size: 40px;
+    color: $color-titulo;
+    text-align: center;
+    font-weight: bold;
+    margin: auto
+}
+
+p{
+    font-family: "Garet-Book", sans-serif;
+    font-size: 20px;
+    color: $color-titulo;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;    
+}
