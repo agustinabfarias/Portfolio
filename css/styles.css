@@ -400,9 +400,9 @@ a:visited{
     }*/
     .arquitectura2{
         display: grid;
-        grid-template-areas:  "tl2" "par" "foto"  ;
+        grid-template-areas:  "tl2" "par" "foto2"  ;
         grid-template-columns: 100%;
-        grid-template-rows: 100px 150px auto 
+        grid-template-rows: 100px 150px auto ;
     }
     .titulo2 {
         font-size: 30px;
@@ -415,26 +415,26 @@ a:visited{
         font-size: 10px;
         margin-top: 10 px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: start;
+        min-height: 100px;
+        max-width: 455px; 
+        margin-left: 58px;
     }
     .yo{
-        padding: 20px;
+        padding: 5px;
         min-height: 100px;
-        max-width: 200px; 
+        max-width: 455px; 
         margin-right: auto;
         margin-left: auto;
     }
     
     .yo img{
-        height: 30px;
-        width: 30px;
+        height: 300px;
+        width: 450px;
         display: flex;
-        align-items: center;
+        align-items:center;
         justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
-
     }
 }
 
