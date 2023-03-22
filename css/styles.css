@@ -232,6 +232,11 @@ textarea {
   grid-area: foto2;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.yo .fotoyo {
+  padding: 10px;
 }
 
 .par {
@@ -254,13 +259,12 @@ textarea {
   font-family: "Garet-Book" sans-serif;
 }
 
-/*animaciones*/
-.animate__animated.animate__fadeIn {
-  --animate-duration: 2s;
-}
-
-.animate__animated .animate__fadeInUp {
-  --animate-duration: 10s;
+/*animaciones
+.animate__animated .animate__fadeInUp{
+    --animate-duration: 10s;
+}*/
+:root {
+  --animate-delay: 0.75s;
 }
 
 body {
@@ -305,6 +309,10 @@ a:link {
 
 a:visited {
   text-decoration: none;
+}
+
+h1 {
+  color: blue;
 }
 
 /*responsive index*/

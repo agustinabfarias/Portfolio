@@ -1,7 +1,8 @@
-/*animaciones*/
-.animate__animated.animate__fadeIn {
-    --animate-duration: 2s;
-    }
+/*animaciones
 .animate__animated .animate__fadeInUp{
     --animate-duration: 10s;
-}
+}*/
+
+:root{
+    --animate-delay: 0.75s;
+  }

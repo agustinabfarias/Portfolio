@@ -27,6 +27,7 @@
     
 }
 
+
 .fotomenu .container{
     float: left;
     width: 33.33%;
@@ -156,7 +157,7 @@ textarea{
 .arquitectura2{
     display: grid;
     /*areas*/
-    grid-template-columns: 4fr, 4fr, 1fr;
+    grid-template-columns: 4fr, 4fr, 1fr; 
     grid-template-rows: 50px 200px 200px auto ;
     /*grid-auto-rows: minmax(100px, auto);*/
     grid-template-areas:
@@ -183,7 +184,11 @@ textarea{
     grid-area: foto2;
     width: 100%;
     height: 100%;
-    
+    display: flex;
+    justify-content: center;
+    .fotoyo{
+        padding: 10px;
+    }
 }
 .par{
     grid-area: par;
