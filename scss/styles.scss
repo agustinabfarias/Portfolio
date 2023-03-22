@@ -1,7 +1,11 @@
 @import "tipografia";
+@import "grids-flex";
+@import "animaciones";
+//VARIABLES
+$vista: mobile;
 
 
-/*POR QUE EL FONDO ES BLANCO*/
+
 body{
     color: rgb(47, 46, 46);
 }
@@ -30,250 +34,20 @@ el titulo a la izquierda en el medio y la foto a la derecha*/
     
 }
 
-
-.infooter{
-    font-family: "Garet-Heavy", sans-serif;
-    font-size: 15px;
-    color: rgb(224, 224, 224);
-    text-align: center;
-    display: flex;
-    align-items:flex-start;
-    justify-content: right;
-    padding: 5%;
-    margin: none;
-
-}
-.container .epigrafe{
-    font-family: $tipografia-sub;
-    font-size: 15px;
-    color: rgb(224, 224, 224);
-    padding: 1em;
-    justify-content: center;
-    align-items: center;
-    align-content:center ;
-    text-decoration: none;
-}
-
-#fotolink:visited{
-    color: none;
-}
-
-.hielos{
-    display: flex;
-    justify-content:center;
-    
-}
-
-.fotomenu .container{
-    /*display: flex;
-    padding: 5px;
-    justify-content: space-evenly;
-    gap: 2em;
-    flex-flow: row wrap;
-    align-items: center;*/
-
-    /*padding: 5px;
-    justify-content: center;
-    gap: 2em;
-    flex-flow: row wrap;
-    align-items: center;*/
-
-
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-}
-.fotomenu-container img{
-    width: 100%;
-}
-.video .container{
-    display: flex;
-    padding: 5px;
-    justify-content: space-evenly;
-    gap: 2em;
-    flex-flow: row wrap;
-    align-items: center;
-    
-}
-.container:hover{
-    cursor: pointer;
-
-}
-
-
-
-#formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-    align-content:left;
-}
-textarea{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.row g-3{
-    background-color: black;
-}
-
-.navbar-collapse{
-    display: flex;
-    justify-content: center;
-}
-
 /*pseudoclases*/
 .epigrafe:hover{
     color: #000000;
     
     font-weight: bold;
 }
-
 a:link{
     text-decoration: none;
     color: black;
 }
-
 a:visited{
     text-decoration: none;
 }
 
-/* GRID */
-
-.espacio{
-    grid-area: es;
-}
-
-.titulo{
-    grid-area: tl;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    
-}
-.subtitulo{
-    grid-area: sb;
-    padding: top 1em; 
-    padding-bottom: 1em;
-    justify-items: center;
-}
-
-.subtitulo .comentario{
-
-    padding: top 1em; 
-    padding-bottom: 1em;
-    justify-items: center;
-
-}
-
-.hielos{
-    grid-area: foto;
-}
-
-.ig{
-    grid-area: ig;
-}
-.arquitectura{
-    display: grid;
-    /*areas*/
-    grid-template-columns: 4fr, auto;
-    grid-template-rows: 50px 300px  auto ;
-    /*grid-auto-rows: minmax(100px, auto);*/
-    grid-template-areas:
-    "es es es es   es   es   es   es   es"
-    "tl tl tl foto foto foto foto foto foto"
-    "sb sb sb foto foto foto foto foto foto"
-    "ig ig ig foto foto foto foto foto foto";
-    
-}
-
-/*******************grid galeria subpaginas***********************/
-.galeria{
-    padding: 10px;
-    max-width: 1100px;
-    margin: 0 auto;
-    background: rgb(64, 64, 64);
-    display: grid;
-    grid-gap: 10px;
-    grid-template-areas: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-    grid-auto-flow: dense;
-}
-/**vertical*/
-.v{
-    grid-row: span 2;
-}
-/**horizontal*/
-.h{
-    grid-column: span 2;
-}
-.vh{
-    grid-row: span 2;
-    grid-column: span 2;
-}
-.galeria div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-}
-
-
-
-
-/*grid sobre mi*/
-.arquitectura2{
-    display: grid;
-    /*areas*/
-    grid-template-columns: 4fr, 4fr, 1fr;
-    grid-template-rows: 50px 200px 200px auto ;
-    /*grid-auto-rows: minmax(100px, auto);*/
-    grid-template-areas:
-    "es     es      es   es   es    es"
-    "tl2  foto2 foto2 foto2 foto2 foto2 "
-    "par  foto2 foto2 foto2 foto2 foto2 "
-    "par   foto2 foto2 foto2 foto2 foto2 ";
-}
-
-.titulo2{
-    grid-area: tl2;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    font-family: "Garet-Heavy", sans-serif;
-    font-size: 50px;
-    color: rgb(221, 221, 221);
-    font-weight: bold;
-    text-align: center;
-
-}
-.yo{
-    grid-area: foto2;
-    width: 100%;
-    height: 100%;
-    
-}
-.par{
-    grid-area: par;
-    font-size: 15px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-
-}
-/*.ft{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
-    grid-template-rows: repeat(4,auto);
-    grid-gap:10px;
-}*/
-
-
-/*grid fotografia*/
-.fotomenu{
-    display: grid;
-}
 
 /*responsive index*/
 @media screen and (max-width: 576px) {
@@ -286,16 +60,18 @@ a:visited{
     .titulo {
         font-size: 30px;
         margin-top: 10 px;
-        display: flex;
+        /*display: flex;
         justify-content: space-around;
-        align-items: end;
+        align-items: end;*/
+        @include media(none,space-around,end)
     }
     .sb{
         font-size: 10px;
         margin-top: 10 px;
-        display: flex;
+        /*display: flex;
         justify-content: space-around;
-        align-items: end;
+        align-items: end;*/
+        @include media(none, space-around, end)
     }
     .hielos{
         padding: 20px;
@@ -308,11 +84,12 @@ a:visited{
     .hielos img{
         height: 300px;
         width: 450px;
-        display: flex;
+        /*display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;*/
         margin-right: auto;
         margin-left: auto;
+        @include media(10px, center, center)
     }
 }
 /*responsive sobre mi*/
@@ -361,19 +138,21 @@ a:visited{
     .titulo2 {
         font-size: 30px;
         margin-top: 10 px;
-        display: flex;
+        /*display: flex;
         justify-content: space-around;
-        align-items: end;
+        align-items: end;*/
+        @include media(none, space-around, end)
     }
     .par{
         font-size: 10px;
         margin-top: 10 px;
-        display: flex;
+        /*display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: start;*/
         min-height: 100px;
         max-width: 455px; 
         margin-left: 58px;
+        @include media (none, center, start)
     }
     .yo{
         padding: 5px;
@@ -386,9 +165,10 @@ a:visited{
     .yo img{
         height: 300px;
         width: 450px;
-        display: flex;
+        /*display: flex;
         align-items:center;
-        justify-content: center;
+        justify-content: center;*/
+        @include media(none, center, center)
     }
 }
 
@@ -423,9 +203,10 @@ a:visited{
     .titulo{
         font-size: 30px;
         margin-top: 5 px;
-        display: flex;
+        /*display: flex;
         justify-content: space-around;
-        align-items: end;
+        align-items: end;*/
+        @include media(none, space-around,end)
     }
 }
 

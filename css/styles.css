@@ -10,7 +10,7 @@
 h1 {
   font-family: "Garet-Heavy", sans-serif;
   font-size: 38px;
-  color: rgb(221, 221, 221);
+  color: rgb(167, 167, 167);
   font-weight: bold;
 }
 
@@ -21,90 +21,31 @@ h1 {
   font-weight: bold;
   text-align: center;
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
-.subtitulo .comentario {
+.subtitulo, h2, h2 .comentario, .subtitulo .comentario, h2 .comentario, h2 .comentario .comentario {
   font-family: "Garet-Book" sans-serif;
-  font-size: 1000px;
-  color: rgb(221, 221, 221);
-  font-weight: bold;
-  margin: auto;
+  font-size: 23px;
+  color: rgb(167, 167, 167);
   text-align: center;
-}
-
-h2 {
-  font-family: "Garet-Book" sans-serif;
-  font-size: 40px;
-  color: rgb(140, 139, 139);
-  text-align: center;
-  font-weight: bold;
   margin: auto;
-}
-
-.subtitulo {
-  font-family: "Garet-Book" sans-serif;
-  font-size: 40px;
-  color: rgb(221, 221, 221);
-  text-align: center;
-  font-weight: bold;
-  margin: auto;
+  font-style: italic;
 }
 
 p {
-  font-family: "Garet-Book", sans-serif;
+  font-family: "Garet-Book" sans-serif;
   font-size: 20px;
-  color: rgb(221, 221, 221);
-  font-weight: bold;
+  color: rgb(167, 167, 167);
   padding: 10px;
   margin: 10px;
-}
-
-/*POR QUE EL FONDO ES BLANCO*/
-body {
-  color: rgb(47, 46, 46);
-}
-
-footer {
-  padding: 1em;
-}
-
-.menu {
-  font-family: "Garet-Book", sans-serif;
-  font-size: 24px;
-  text-align: center; /*por qué no funciona*/
-  width: 100px;
-  color: rgb(181, 175, 175);
-  font-weight: bold;
-  padding: 10px;
-  margin: 10px;
-}
-
-/*En el index quiero poner el menu centrado, 
-el titulo a la izquierda en el medio y la foto a la derecha*/
-#foto {
-  font-family: "Garet-Heavy", sans-serif;
-  font-size: 60px;
-  color: rgb(221, 221, 221);
-  font-weight: bold;
-  text-align: center;
-}
-
-.infooter {
-  font-family: "Garet-Heavy", sans-serif;
-  font-size: 15px;
-  color: rgb(224, 224, 224);
-  text-align: center;
-  display: flex;
-  align-items: flex-start;
-  justify-content: right;
-  padding: 5%;
-  margin: none;
+  font-style: italic;
 }
 
 .container .epigrafe {
   font-family: "Garet-Book" sans-serif;
   font-size: 15px;
+  font-style: oblique;
   color: rgb(224, 224, 224);
   padding: 1em;
   justify-content: center;
@@ -113,27 +54,26 @@ el titulo a la izquierda en el medio y la foto a la derecha*/
   text-decoration: none;
 }
 
+.infooter {
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  padding: 5%;
+  margin: none;
+}
+
 #fotolink:visited {
   color: none;
 }
 
+/*MIXINS*/
 .hielos {
   display: flex;
   justify-content: center;
 }
 
 .fotomenu .container {
-  /*display: flex;
-  padding: 5px;
-  justify-content: space-evenly;
-  gap: 2em;
-  flex-flow: row wrap;
-  align-items: center;*/
-  /*padding: 5px;
-  justify-content: center;
-  gap: 2em;
-  flex-flow: row wrap;
-  align-items: center;*/
   float: left;
   width: 33.33%;
   padding: 5px;
@@ -144,11 +84,15 @@ el titulo a la izquierda en el medio y la foto a la derecha*/
 }
 
 .video .container {
+  /*display: flex;
+  padding: 5px;
+  justify-content: space-evenly;
+  align-items: center;*/
+  gap: 2em;
+  flex-flow: row wrap;
   display: flex;
   padding: 5px;
   justify-content: space-evenly;
-  gap: 2em;
-  flex-flow: row wrap;
   align-items: center;
 }
 
@@ -157,11 +101,15 @@ el titulo a la izquierda en el medio y la foto a la derecha*/
 }
 
 #formulario {
-  display: flex;
+  align-content: left;
   flex-direction: column;
+  /*display: flex;
+  justify-content: left;
+  align-items: center;*/
+  display: flex;
+  padding: none;
   justify-content: left;
   align-items: center;
-  align-content: left;
 }
 
 textarea {
@@ -174,26 +122,6 @@ textarea {
   background-color: black;
 }
 
-.navbar-collapse {
-  display: flex;
-  justify-content: center;
-}
-
-/*pseudoclases*/
-.epigrafe:hover {
-  color: #000000;
-  font-weight: bold;
-}
-
-a:link {
-  text-decoration: none;
-  color: black;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
 /* GRID */
 .espacio {
   grid-area: es;
@@ -201,19 +129,23 @@ a:visited {
 
 .titulo {
   grid-area: tl;
+  /*display: flex;
+  justify-content: center;
+  align-items: end;*/
   display: flex;
+  padding: none;
   justify-content: center;
   align-items: end;
 }
 
-.subtitulo {
+.subtitulo, .subtitulo .comentario, h2, h2 .comentario {
   grid-area: sb;
   padding: top 1em;
   padding-bottom: 1em;
   justify-items: center;
 }
 
-.subtitulo .comentario {
+.subtitulo .comentario, h2 .comentario, h2 .comentario .comentario {
   padding: top 1em;
   padding-bottom: 1em;
   justify-items: center;
@@ -282,14 +214,18 @@ a:visited {
 
 .titulo2 {
   grid-area: tl2;
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: end;*/
   font-family: "Garet-Heavy", sans-serif;
   font-size: 50px;
   color: rgb(221, 221, 221);
   font-weight: bold;
   text-align: center;
+  display: flex;
+  padding: none;
+  justify-content: center;
+  align-items: end;
 }
 
 .yo {
@@ -315,6 +251,60 @@ a:visited {
 /*grid fotografia*/
 .fotomenu {
   display: grid;
+  font-family: "Garet-Book" sans-serif;
+}
+
+/*animaciones*/
+.animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
+.animate__animated .animate__fadeInUp {
+  --animate-duration: 10s;
+}
+
+body {
+  color: rgb(47, 46, 46);
+}
+
+footer {
+  padding: 1em;
+}
+
+.menu {
+  font-family: "Garet-Book", sans-serif;
+  font-size: 24px;
+  text-align: center; /*por qué no funciona*/
+  width: 100px;
+  color: rgb(181, 175, 175);
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*En el index quiero poner el menu centrado, 
+el titulo a la izquierda en el medio y la foto a la derecha*/
+#foto {
+  font-family: "Garet-Heavy", sans-serif;
+  font-size: 60px;
+  color: rgb(221, 221, 221);
+  font-weight: bold;
+  text-align: center;
+}
+
+/*pseudoclases*/
+.epigrafe:hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 /*responsive index*/
@@ -328,14 +318,22 @@ a:visited {
   .titulo {
     font-size: 30px;
     margin-top: 10 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
     display: flex;
+    padding: none;
     justify-content: space-around;
     align-items: end;
   }
   .sb {
     font-size: 10px;
     margin-top: 10 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
     display: flex;
+    padding: none;
     justify-content: space-around;
     align-items: end;
   }
@@ -349,11 +347,15 @@ a:visited {
   .hielos img {
     height: 300px;
     width: 450px;
-    display: flex;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
   }
 }
 /*responsive sobre mi*/
@@ -402,19 +404,27 @@ a:visited {
   .titulo2 {
     font-size: 30px;
     margin-top: 10 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
     display: flex;
+    padding: none;
     justify-content: space-around;
     align-items: end;
   }
   .par {
     font-size: 10px;
     margin-top: 10 px;
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: start;*/
     min-height: 100px;
     max-width: 455px;
     margin-left: 58px;
+    display: flex;
+    padding: none;
+    justify-content: center;
+    align-items: start;
   }
   .yo {
     padding: 5px;
@@ -426,9 +436,13 @@ a:visited {
   .yo img {
     height: 300px;
     width: 450px;
+    /*display: flex;
+    align-items:center;
+    justify-content: center;*/
     display: flex;
-    align-items: center;
+    padding: none;
     justify-content: center;
+    align-items: center;
   }
 }
 /*Responsive audiovisuales*/
@@ -459,7 +473,11 @@ a:visited {
   .titulo {
     font-size: 30px;
     margin-top: 5 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
     display: flex;
+    padding: none;
     justify-content: space-around;
     align-items: end;
   }

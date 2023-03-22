@@ -7,9 +7,11 @@
     src: url("..//tipografias/Garet-Heavy.ttf");
 }
 
+
 $tamaño-titulo: 38px;
+$tamaño-sub:23px;
 $tipografia-titulo:"Garet-Heavy", sans-serif;
-$color-titulo:  rgb(221, 221, 221);
+$color-titulo:  rgb(167, 167, 167);
 $tipografia-sub:"Garet-Book" sans-serif;
 
 
@@ -29,41 +31,46 @@ h1{
     font-weight: bold;
     text-align: center;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
 }
-
-.subtitulo .comentario{
-    font-family: $tipografia-sub;
-    font-size: 1000px;
-    color: rgb(221, 221, 221);
-    font-weight: bold;
-    margin: auto;
-    text-align: center;
-
-}
-h2{
-    font-family:$tipografia-sub;
-    font-size: 40px;
-    color: rgb(140, 139, 139);
-    text-align: center;
-    font-weight: bold;
-    margin: auto;
-}
-
+//subtitulos
 .subtitulo{
     font-family:$tipografia-sub;
-    font-size: 40px;
+    font-size: $tamaño-sub;
     color: $color-titulo;
     text-align: center;
-    font-weight: bold;
-    margin: auto
+    //font-weight: bold;
+    margin: auto;
+    font-style: italic;
+}
+.subtitulo .comentario{
+    @extend .subtitulo;
+}
+h2{
+    //font-size: 40px;
+    @extend .subtitulo;
 }
 
+
+
 p{
-    font-family: "Garet-Book", sans-serif;
+    font-family: $tipografia-sub;
     font-size: 20px;
     color: $color-titulo;
-    font-weight: bold;
+    //font-weight: bold;
     padding: 10px;
     margin: 10px;    
+    font-style: italic;
+}
+.container .epigrafe{
+    font-family: $tipografia-sub;
+    font-size: 15px;
+    font-style: oblique;
+    color: rgb(224, 224, 224);
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    align-content:center ;
+    text-decoration: none;
+
 }
