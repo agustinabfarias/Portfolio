@@ -311,10 +311,24 @@ a:visited {
   text-decoration: none;
 }
 
-h1 {
-  color: blue;
-}
+/*
+*
+INTENTO DE CONFICIONALES CON MEDIA QUERY
 
+@if map-get($grid-breakpoints,sm) == true {
+    @media screen and (max-width: 576px) {
+        h1{
+            color: red;
+        }
+    }
+} @else {
+        h1{
+            color:blue;
+        }
+
+}
+*
+*/
 /*responsive index*/
 @media screen and (max-width: 576px) {
   .arquitectura {
@@ -365,44 +379,7 @@ h1 {
     justify-content: center;
     align-items: center;
   }
-}
-/*responsive sobre mi*/
-@media screen and (max-width: 576px) {
-  /*.arquitectura2 {
-      display: grid;
-      grid-template-areas:  "tl2" "par" "foto"  ;
-      grid-template-columns: 100%;
-      grid-template-rows: 100px 200px auto  
-  }
-  .titulo {
-      font-size: 30px;
-      margin-top: 10 px;
-      display: flex;
-      justify-content: space-around;
-      align-items: end;
-      padding-top: 1em;
-      padding-bottom: 1em;
-  }
-  .sb{
-      font-size: 10px;
-      margin-top: 10 px;
-      display: flex;
-      justify-content: space-around;
-      align-items: end;
-  }
-  .yo{
-      background-color: aliceblue;
-      padding: 20px;
-  }
-  .yo img{
-      height: 30px;
-      width: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: auto;
-      margin-left: auto;
-  }*/
+  /*RESPONSIVE SOBRE MI*/
   .arquitectura2 {
     display: grid;
     grid-template-areas: "tl2" "par" "foto2";
@@ -410,18 +387,18 @@ h1 {
     grid-template-rows: 100px 150px auto;
   }
   .titulo2 {
-    font-size: 30px;
+    font-size: 45px;
     margin-top: 10 px;
     /*display: flex;
     justify-content: space-around;
     align-items: end;*/
     display: flex;
     padding: none;
-    justify-content: space-around;
+    justify-content: center;
     align-items: end;
   }
   .par {
-    font-size: 10px;
+    font-size: 15px;
     margin-top: 10 px;
     /*display: flex;
     justify-content: center;
@@ -442,8 +419,8 @@ h1 {
     margin-left: auto;
   }
   .yo img {
-    height: 300px;
-    width: 450px;
+    height: 350px;
+    width: 500px;
     /*display: flex;
     align-items:center;
     justify-content: center;*/
@@ -452,16 +429,21 @@ h1 {
     justify-content: center;
     align-items: center;
   }
-}
-/*Responsive audiovisuales*/
-@media screen and (max-width: 576px) {
+  /*Responsive audiovisuales*/
   iframe {
-    height: 300px;
-    width: 400px;
+    height: 280px;
+    width: 500px;
+    padding: 5px;
   }
-}
-/*Responsive fotografia*/
-@media screen and (max-width: 576px) {
+  .av h1 {
+    font-size: 30px;
+    margin-top: 10 px;
+    display: flex;
+    padding: none;
+    justify-content: center;
+    align-items: end;
+  }
+  /*Responsive fotografia*/
   .fotomenu .container {
     /*box modeling*/
     width: 90%;
@@ -487,6 +469,149 @@ h1 {
     display: flex;
     padding: none;
     justify-content: space-around;
+    align-items: end;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .arquitectura {
+    display: grid;
+    grid-template-areas: "tl" "sb" "foto";
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 20px auto;
+  }
+  .titulo {
+    font-size: 70px;
+    margin-top: 50 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
+    display: flex;
+    padding: none;
+    justify-content: space-around;
+    align-items: end;
+  }
+  .sb {
+    font-size: 20px;
+    margin-top: 10 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
+    display: flex;
+    padding: none;
+    justify-content: space-around;
+    align-items: end;
+  }
+  .hielos {
+    padding: 20px;
+    min-height: 100px;
+    max-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hielos img {
+    height: 550px;
+    width: 700px;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 45px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  /*RESPONSIVE SOBRE MI*/
+  .arquitectura2 {
+    display: grid;
+    grid-template-areas: "tl2" "par" "foto2";
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 250px auto;
+  }
+  .titulo2 {
+    font-size: 45px;
+    margin-top: 10 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
+    display: flex;
+    padding: none;
+    justify-content: center;
+    align-items: end;
+  }
+  .par {
+    font-size: 20px;
+    margin-top: 10 px;
+    /*display: flex;
+    justify-content: center;
+    align-items: start;*/
+    min-height: 100px;
+    max-width: 455px;
+    margin-left: 155px;
+    display: flex;
+    padding: none;
+    justify-content: center;
+    align-items: start;
+  }
+  .yo {
+    padding: 5px;
+    min-height: 100px;
+    max-width: 455px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .yo img {
+    height: 500px;
+    width: 700px;
+    /*display: flex;
+    align-items:center;
+    justify-content: center;*/
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  /*Responsive audiovisuales*/
+  iframe {
+    height: 300px;
+    width: 600px;
+    padding: 5px;
+  }
+  .av h1 {
+    font-size: 45px;
+    margin-top: 10 px;
+    display: flex;
+    padding: none;
+    justify-content: center;
+    align-items: end;
+  }
+  /*Responsive fotografia*/
+  .fotomenu .container {
+    /*box modeling*/
+    width: 90%;
+    max-width: 1000px;
+    height: 85%;
+    width: 90%;
+    /*tipografia*/
+    font-size: 50px;
+    text-align: center;
+  }
+  .fotomenu .container img {
+    width: 90%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+  .titulo {
+    font-size: 45px;
+    margin-top: 10 px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items: end;*/
+    display: flex;
+    padding: none;
+    justify-content: center;
     align-items: end;
   }
 }
