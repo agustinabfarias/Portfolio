@@ -8,6 +8,33 @@
 }
 
 
+
+body{
+    color: rgb(47, 46, 46);
+}
+footer{
+    padding: 1em;
+}
+.menu{
+    font-family: "Garet-Book", sans-serif;
+    font-size: 24px;
+    text-align: center; /*por qué no funciona*/
+    width: 100px;
+    color: rgb(181, 175, 175);
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+}
+
+#foto{
+    font-family: "Garet-Heavy", sans-serif;
+    font-size: 60px;
+    color: rgb(221, 221, 221);
+    font-weight: bold;
+    text-align: center;
+    
+} 
+
 $tamaño-titulo: 38px;
 $tamaño-sub:23px;
 $tipografia-titulo:"Garet-Heavy", sans-serif;
@@ -74,3 +101,4 @@ p{
     text-decoration: none;
 
 }
+

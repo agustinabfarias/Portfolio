@@ -7,6 +7,33 @@
   font-family: "Garet-Heavy", sans-serif;
   src: url("..//tipografias/Garet-Heavy.ttf");
 }
+body {
+  color: rgb(47, 46, 46);
+}
+
+footer {
+  padding: 1em;
+}
+
+.menu {
+  font-family: "Garet-Book", sans-serif;
+  font-size: 24px;
+  text-align: center; /*por qué no funciona*/
+  width: 100px;
+  color: rgb(181, 175, 175);
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+}
+
+#foto {
+  font-family: "Garet-Heavy", sans-serif;
+  font-size: 60px;
+  color: rgb(221, 221, 221);
+  font-weight: bold;
+  text-align: center;
+}
+
 h1 {
   font-family: "Garet-Heavy", sans-serif;
   font-size: 38px;
@@ -267,35 +294,6 @@ textarea {
   --animate-delay: 0.75s;
 }
 
-body {
-  color: rgb(47, 46, 46);
-}
-
-footer {
-  padding: 1em;
-}
-
-.menu {
-  font-family: "Garet-Book", sans-serif;
-  font-size: 24px;
-  text-align: center; /*por qué no funciona*/
-  width: 100px;
-  color: rgb(181, 175, 175);
-  font-weight: bold;
-  padding: 10px;
-  margin: 10px;
-}
-
-/*En el index quiero poner el menu centrado, 
-el titulo a la izquierda en el medio y la foto a la derecha*/
-#foto {
-  font-family: "Garet-Heavy", sans-serif;
-  font-size: 60px;
-  color: rgb(221, 221, 221);
-  font-weight: bold;
-  text-align: center;
-}
-
 /*pseudoclases*/
 .epigrafe:hover {
   color: #000000;
@@ -311,24 +309,6 @@ a:visited {
   text-decoration: none;
 }
 
-/*
-*
-INTENTO DE CONFICIONALES CON MEDIA QUERY
-
-@if map-get($grid-breakpoints,sm) == true {
-    @media screen and (max-width: 576px) {
-        h1{
-            color: red;
-        }
-    }
-} @else {
-        h1{
-            color:blue;
-        }
-
-}
-*
-*/
 /*responsive index*/
 @media screen and (max-width: 576px) {
   .arquitectura {
